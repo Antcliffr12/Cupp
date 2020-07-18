@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+$phone: "only screen and (max-width:576px)";
+$largePhones: "only screen and (min-width:576px)";
+$tablets: "only screen and (min-width:768px)";
+$laptops: "only screen and (min-width:992px)";
+$desktops: "only screen and(min-width:1200px)";
+
+@include media-breakpoint-down(xs) {
+  .navbar-expand-md {
+    .container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+}

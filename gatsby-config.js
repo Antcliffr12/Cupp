@@ -1,10 +1,14 @@
+const test = require(`gatsby-plugin-postcss-sass`)
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Cupp My Plumber`,
+    description: `Cupp My Plumber is the #1 rated premier Indianapolis plumber and Repiping company. A rating on BBB. Residential and commerical Indianapolis Plumbing`,
+    author: `Ryan Antcliff`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
