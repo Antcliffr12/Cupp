@@ -21,5 +21,3 @@ collections: # A list of collection the CMS should be able to edit
       - { label: Image, name: image, widget: image }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
-      - { label: "Meta Title", name: "meta_title", widget: "string" }
-      - { label: "Meta Description", name: "meta_description", widget: "text" }
