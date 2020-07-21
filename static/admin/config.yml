@@ -6,8 +6,8 @@ media_folder: static/assets
 public_folder: assets
 
 collections: # A list of collection the CMS should be able to edit
-  - name: home
-    label: Home Page
+  - name: page
+    label: Pages
     folder: src/pages/home
     create: true
     fields:
