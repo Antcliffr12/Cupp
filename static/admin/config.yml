@@ -8,10 +8,18 @@ public_folder: assets
 collections: # A list of collection the CMS should be able to edit
   - name: page
     label: Pages
-    folder: page
+    folder: src/pages
     create: true
     fields:
-      - { name: path, label: Path }
+      - {
+          label: Tempalte Key,
+          name: templateKey,
+          widget: hidden,
+          default: homePage,
+        }
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
       - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { label: "Meta Title", name: "meta_title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
