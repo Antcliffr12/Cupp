@@ -37,10 +37,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
     pages.forEach(edge => {
       createPage({
-        // page slug set in md frontmatter
-        path: edges.node.fields.slug,
+        path: edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(page.node.frontmatter.template)}.js`
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
