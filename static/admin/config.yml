@@ -6,8 +6,8 @@ media_folder: static/assets
 public_folder: assets
 
 collections: # A list of collection the CMS should be able to edit
-  - name: page
-    label: Pages
+  - name: home
+    label: Home Page
     folder: src/pages/home
     create: true
     fields:
@@ -21,5 +21,16 @@ collections: # A list of collection the CMS should be able to edit
       - { label: Image, name: image, widget: image }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
-      - { label: "Meta Title", name: "meta_title", widget: "string" }
-      - { label: "Meta Description", name: "meta_description", widget: "text" }
+
+  - name: page
+    label: Pages
+    folder: src/pages
+    create: true
+    fields:
+      - {
+          label: Tempalte Key,
+          name: templateKey,
+          widget: hidden,
+          default: default-page,
+        }
+      - { label: Title, name: title, widget: string }
