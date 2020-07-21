@@ -7,6 +7,8 @@
 // You can delete this file if you're not using it
 const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
+
 const { post } = require("jquery")
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -17,6 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
+            id
             frontmatter {
               templateKey
             }
@@ -52,6 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+  fmImagesToRelative(node)
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
