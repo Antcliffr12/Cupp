@@ -7,7 +7,7 @@ export const DefaultPageTemplate = ({ title, image }) => (
       <section>
         <div className="container">
           <h1>{title}</h1>
-          <img src={image} />
+          {image}
         </div>
       </section>
     </Layout>

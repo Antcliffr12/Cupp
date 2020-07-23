@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Layout from "../components/Layout/layout"
-import Image from "../components/Image/image"
+import Img from "gatsby-image"
 
 export const HomePageTemplate = ({ title, image }) => (
   <div>
@@ -9,7 +10,6 @@ export const HomePageTemplate = ({ title, image }) => (
       <section>
         <div className="container">
           <h1>{title}</h1>
-          <img src={image} />
         </div>
       </section>
     </Layout>

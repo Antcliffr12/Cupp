@@ -34,4 +34,4 @@ collections: # A list of collection the CMS should be able to edit
           default: default-page,
         }
       - { label: Title, name: title, widget: string }
-      - { label: Image, name: pageImage, widget: image }
+      - { label: Image, name: image, widget: image }

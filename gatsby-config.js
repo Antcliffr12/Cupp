@@ -1,5 +1,3 @@
-const test = require(`gatsby-plugin-postcss-sass`)
-
 module.exports = {
   siteMetadata: {
     title: `Cupp My Plumber`,
@@ -14,24 +12,38 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-transformer-remark",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: `images`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
         name: "pages",
       },
     },
+
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Cupp My Plumber`,
+        short_name: `Cupp`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
