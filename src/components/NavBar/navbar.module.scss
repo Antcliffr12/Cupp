@@ -28,6 +28,9 @@
           color: #a63f2e;
         }
       }
+      @include media-breakpoint-down(xs) {
+        width: 200px;
+      }
       @include media-breakpoint-up(md) {
         font-size: 28px;
         line-height: 28px;

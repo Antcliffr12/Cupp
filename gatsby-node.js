@@ -22,6 +22,8 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             frontmatter {
               templateKey
+              title
+              image
             }
             fields {
               slug
